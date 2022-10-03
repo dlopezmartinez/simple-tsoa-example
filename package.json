@@ -3,13 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
+"scripts": {
     "test": "jest --config ./jest.config.js",
     "start": "node ./dist",
-    "build": "npm run clean && tsc -p tsconfig-build.json",
+    "build": "tsc -p tsconfig-build.json",
     "prestart": "npm run build",
-    "clean": "rm -rf dist",
-    "dev": "npm run generate && ./node_modules/nodemon/bin/nodemon.js",
+    "dev": "npm run generate",
     "generate": "tsoa routes && tsoa swagger",
     "database": "docker-compose -f src/database/mongo.yml up -d"
   },
