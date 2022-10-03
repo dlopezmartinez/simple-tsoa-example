@@ -1,0 +1,7 @@
+Products:
+ balance: String
+ type: String
+User:
+ username: String
+ password: String
+ isLogged: Boolean
