@@ -43,21 +43,6 @@
 				"properties": {},
 				"type": "object",
 				"additionalProperties": false
-			},
-			"IUserDTO": {
-				"properties": {
-					"ID": {
-						"type": "string"
-					},
-					"username": {
-						"type": "string"
-					},
-					"password": {
-						"type": "string"
-					}
-				},
-				"type": "object",
-				"additionalProperties": false
 			}
 		},
 		"securitySchemes": {}
@@ -632,7 +617,7 @@
 					"content": {
 						"application/json": {
 							"schema": {
-								"$ref": "#/components/schemas/IUserDTO"
+								"$ref": "#/components/schemas/IUser"
 							}
 						}
 					}
