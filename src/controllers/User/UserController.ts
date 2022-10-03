@@ -4,7 +4,6 @@ import { UserServiceImpl } from "@service/UserServiceImpl";
 import { Controller, Get, Route, Query, Delete, Put, Body, Post, Response, SuccessResponse, Tags } from 'tsoa';
 import { ProvideSingleton, inject } from '@ioc/ioc';
 import ServiceError from "@common/exception/ServiceError";
-import IUserDTO from "@models/entities/UserDTO";
 
 
 /**
@@ -108,7 +107,7 @@ export class UserController extends Controller {
   @Response<{ message: string }>(400, "User not found")
   @SuccessResponse("200", "Request Success")
   @Post('/login')
-  public async login(@Body() user: IUserDTO): Promise<Boolean>  {
+  public async login(@Body() user: IUser): Promise<Boolean>  {
     //Do some business logic...
     try {
       const allUsers = await this.userService.getAll();
